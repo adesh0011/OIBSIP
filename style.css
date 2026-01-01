@@ -6,15 +6,13 @@
 }
 
 body {
-  background: #ffffff;
   color: #0f2a44;
 }
 
 /* HERO */
 .hero {
-  min-height: 90vh;
   background: linear-gradient(135deg, #f4e9d8, #fdeee7);
-  padding: 30px 8%;
+  padding: 40px 8%;
 }
 
 .navbar {
@@ -27,37 +25,47 @@ body {
   color: #d12b2b;
 }
 
-.hero-box {
-  max-width: 600px;
-  margin-top: 120px;
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 80px;
 }
 
-.hero-box h1 {
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
   font-size: 52px;
   line-height: 1.2;
 }
 
-.hero-box p {
-  margin: 15px 0 25px;
+.hero-text p {
+  margin: 20px 0;
   font-size: 18px;
 }
 
-.hero-box span {
+.hero-text span {
   display: block;
-  margin-top: 12px;
+  margin-top: 10px;
   color: #555;
+}
+
+.hero-img img {
+  width: 450px;
 }
 
 /* BUTTON */
 .btn {
   background: #1aa37a;
-  color: #fff;
+  color: white;
   padding: 14px 28px;
   border: none;
   border-radius: 30px;
   cursor: pointer;
   font-size: 16px;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
 .btn:hover {
@@ -69,7 +77,7 @@ body {
 .section {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 60px;
   padding: 90px 10%;
 }
 
@@ -77,8 +85,8 @@ body {
   flex-direction: row-reverse;
 }
 
-.text {
-  width: 50%;
+.section-img {
+  width: 420px;
 }
 
 .text h2 {
@@ -87,12 +95,6 @@ body {
 
 .text p {
   margin: 15px 0 25px;
-}
-
-.img {
-  width: 40%;
-  font-size: 90px;
-  text-align: center;
 }
 
 /* FEATURES */
@@ -104,9 +106,9 @@ body {
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.8);
   padding: 35px;
   border-radius: 20px;
+  background: #ffffff;
   box-shadow: 0 20px 40px rgba(0,0,0,0.08);
   transition: transform 0.3s;
 }
@@ -122,29 +124,19 @@ body {
   text-align: center;
 }
 
-.map-grid {
+.map-content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 40px;
 }
 
-.world {
-  font-size: 140px;
+.map-img {
+  width: 500px;
 }
 
-.stats {
-  display: grid;
-  gap: 20px;
-  text-align: left;
-}
-
-.stats div strong {
-  font-size: 34px;
-}
-
-.stats span {
-  display: block;
-  color: #666;
+.stats h3 {
+  font-size: 32px;
 }
 
 /* FOOTER */
@@ -157,16 +149,17 @@ footer {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+  .hero-content,
   .section,
   .section.reverse,
-  .map-grid {
+  .map-content {
     flex-direction: column;
+    text-align: center;
   }
 
-  .text,
-  .img {
+  img {
     width: 100%;
-    text-align: center;
+    max-width: 350px;
   }
 
   .features {
