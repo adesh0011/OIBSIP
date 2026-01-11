@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Temperature Converter</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+  <!-- 🌙 Dark Mode Toggle -->
+  <div class="theme-toggle">🌙</div>
+
+  <div class="card">
+
+    <h1>🌡 Smart Converter</h1>
+
+    <p class="label">Convert <span class="C">°C</span> ➜ <span class="F">°F</span></p>
+
+    <input type="number" id="converter" placeholder="Enter temperature"/>
+
+    <!-- 🔥 Temperature Meter -->
+    <div class="meter">
+      <div class="fill"></div>
+    </div>
+
+    <p class="result"></p>
+
+    <div class="buttons">
+      <button class="changeButton">Swap</button>
+      <button class="resetButton">Reset</button>
+    </div>
+
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
